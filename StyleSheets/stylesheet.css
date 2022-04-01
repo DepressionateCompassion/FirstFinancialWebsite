@@ -1,0 +1,1405 @@
+* {
+    box-sizing: border-box;
+
+
+}
+
+
+/*Body Styling */
+body {
+    background-color: white;
+    height: 100%;
+    margin: 0;
+    /* Setting the margin to 0 because the original default body css settings has a default margin of 8px. */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Setting the font of the website to Arial, Helvetica, sans-serif font. */
+    font-size: 16px;
+    /*Setting the font size to 16px. */
+}
+
+
+
+/* Company Name Box*/
+#HTMLTitle {
+    text-align: center;
+    /*aligning the text to the center of the box */
+    width: auto;
+    /*keep the div element the same width as it is when additional space is added to the parent  */
+    height: auto;
+    /*keep the div element same height as it is when additional space is added to the parent  */
+    font-style: oblique;
+    /*set the font style to oblique. */
+}
+
+#BacktoTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    z-index: 3;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 160, .5);
+    color: rgba(255, 255, 255, 5);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#BacktoTopBtn:hover {
+    background-color: rgba(0, 0, 160, .8)
+}
+
+/*Navigation Bar*/
+/*Media Screen For lesser than 1000px */
+@media screen and (min-width:0px) and (max-width:1000px) {
+
+    nav {
+        display: grid;
+        /* set the display to grid display */
+        grid-template-rows: auto;
+        /* set the grid rows to 6 rows of equal spacing in the individual divs.. */
+        width: 100%;
+        /*let nav taking up the full space of the parent.*/
+        height: 100%;
+        /*let nav take up the full space of the parent. */
+        background-color: #f4f4f4;
+        /*set the background colour to #f4f4f4 */
+    }
+
+    nav li {
+        display: inline-block;
+        /* let the li elements that belong to nav have a display that is inline-block. */
+        padding-left: 2%;
+        /* let each nav li element have a padding left of 2% */
+
+    }
+
+    .ToggleMenuButton {
+        display: block;
+        /* let the togglemenubutton div have a block display */
+        cursor: pointer;
+        /* let the cursor be a pointer when it hovers around the toggle menu button. */
+    }
+
+
+
+
+    .Bar1, .Bar2, .Bar3 {
+        width: 35px;
+        /* let the divs have a width of 35px. */
+        height: 5px;
+        /* let the divs have a height of 5px  */
+        background-color: black;
+        /* let the colour of the div be black. */
+        margin: 6px 0;
+        /* let the divs have a margin of 6px in width and 0 in height. */
+
+    }
+
+
+    #NavigationDiv {
+        display: none;
+        /* set the display of the navigation div to none so that users can toggle by using the togglemenubutton */
+        grid-gap: 5px;
+        /* set the grid gap to 5px */
+        grid-template-rows: auto;
+        /* set the grid template row into equal boxes */
+    }
+
+
+    .NavigationHeadLine {
+        background-color: #cacad4;
+        /* set the background color of the navigation headline such as home, technology, business to #cacad4. */
+        border-style: solid;
+        /*set the border-style to solid lines */
+
+    }
+
+    .ULNewsContainer {
+        border-style: solid;
+        /*set the border-style to solid lines. */
+        display: flex;
+        /* set the display to flex  */
+        flex-direction: column;
+        /* set the flex-direction to columns. so that it will go from top to bottom. */
+        width: 100%;
+        /*set the width to 100% */
+        height: 50%;
+        /* set the height to 50% */
+        text-align: center;
+        /* set the text to be aligned to the center. */
+        background-color: #cacad4;
+        /*set the background color to #fcacad4. */
+        margin-bottom: 20px;
+        /*set the margin bottom to 20px */
+        margin-top: 20px;
+        /* set the margin top to 20 px */
+
+    }
+
+
+    .NavNewsUL {
+        display: block;
+        /*set the element's display to block*/
+        width: 100%;
+        /*set the width to 100% of the parent's element.*/
+        height: 100%;
+        /*set the height to 100% of the parent's element*/
+        padding-right: 10%
+            /*set the padding-right to 10% to look center.*/
+    }
+
+    .licontainers {
+        width: 100%;
+        /*set the width to 100% of the parent element.*/
+        display: block;
+        /*set the display of the li containers to block.*/
+        padding-top: 1vh;
+        /*set the padding-top to 1 viewheight so that it will have some space from and not directly sticking to the border.*/
+    }
+
+    .picContainers {
+        display: block;
+        /*set the picture containers to block.*/
+        width: 100%;
+        /*set the width to 100% of the parent element*/
+        height: 100%;
+        /*set the height to 100% of the parent element.*/
+    }
+
+    .NavPic {
+        display: inline-block;
+        /*set the display to inline block*/
+        width: 100px;
+        /*set the width to 100px so that it doesn't look too big and mobile users can see it from their phone.*/
+        height: 60px;
+        /*set the height to 60px so that it doesn't look too long for the phone to view.*/
+    }
+
+
+
+    #WorldNewsContainer {
+        display: none;
+        /*set the display to none and appear only if the users click on it.*/
+    }
+
+    #BusinessNewsContainer {
+        display: none;
+        /*set the display to none and appear only if the users click on it.*/
+    }
+
+    #TechnologyNewsContainer {
+        display: none;
+        /*set the display to none and appear only if the users click on it.*/
+    }
+
+    #OtherNewsContainer {
+        display: none;
+        /*set the display to none and appear only if the users click on it.*/
+    }
+
+
+
+
+
+
+
+
+
+
+}
+
+/*Navigation Bar for More than 1000px */
+/*Media Screen For More than 1000px */
+@media screen and (min-width:1000px) {
+    nav {
+        width: 100%;
+        /*set the width to 100%*/
+        background-color: #f4f4f4;
+        /*set the background color of the website's navigation bar to #f4f4f4*/
+        text-align: center;
+        /*set the text to center of the elements.*/
+    }
+
+    nav li {
+        display: inline-block;
+        /*set the display to inline-block so that it will be side by side.*/
+        padding-left: 10px;
+        /*set the padding-left to 10px so that the elements can have some space next to each other.*/
+
+
+    }
+
+    nav>ul {
+        margin: 0;
+        /*set unordered list in nav to have a margin of 0*/
+        padding: 0;
+        /*set the unordered list in nav to have a padding of 0.*/
+
+    }
+
+
+
+
+    .NavNewsContainer {
+        max-width: 500px;
+        /*set the max-width of the hoverable navigation links to link to other webpages to 500px*/
+        max-height: 440px;
+        /* set the max-height of the hoverable navigation links to link to other webpagees to 440px */
+        width: 100%;
+        /* set the width to 100% of 500px */
+        height: 100%;
+        /* set  the height to 100% of the 440px */
+        position: absolute;
+        /* set the position to be absolute*/
+        display: none;
+        /*set the display to be none so that it will only display when the mouse hovered. */
+        background-color: #f4f4f4;
+        /* set the background color to #f4f4f4 */
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        /* set abit of box shadow */
+        z-index: 55;
+        /*set the z index to 55 so that it will be displayed in front of the main page.*/
+
+    }
+
+    .ULNewsContainer {
+        padding-top: 1vh;
+        /*set the padding-top  to 1 view height.*/
+        padding-bottom: 1vh;
+        /*set the padding- bottom to 1 view height so that it will have some spaces between itself and the next container.*/
+        display: flex;
+        /*set the display to flex. so that images and text can be displayed side by side.*/
+
+
+    }
+
+
+    .licontainers {
+        width: 250px;
+        /*set the width of the text containers to be 250px.*/
+        height: 167px;
+        /*set the height of the text containers to be 167px. */
+        padding-top: 1vh;
+        /*set the padding-top to 1viewheight so that the text box will have some spaces between itself and the top of the parent element.*/
+        font-size: 2em;
+        /*set the font size to be bigger which is 2em. */
+        color: dimgrey;
+        /*set the color of the text to be dimgrey. */
+    }
+
+    .picContainers {
+        width: 50%;
+        /*set the width to be 50% of the parent element. */
+        height: 50%;
+        /*set the height of the container to bne 50% of the parent element. */
+    }
+
+    .NavPic {
+        object-fit: cover;
+        width: 250px;
+        /*set the width to be 250px */
+        height: 167px;
+        /*set the height to be 167px. */
+        padding-right: 30px;
+        /*set the padding-right to be 30px so that the picture doesn't stick exactly to the right of the box of piccontainers. */
+    }
+
+    .NavNewsContainerS {
+        max-width: 500px;
+        /*set the max-width to 500px. */
+        max-height: 200px;
+        /*set the max-height to 200px  */
+        width: 100%;
+        /*set the width to be 100% of 500px. */
+        height: 100%;
+        /*set the height to be 100% of 200px. */
+        display: none;
+        /*set the display to be none only when it is clicked on or hovered then will it show. */
+        position: absolute;
+        /*set the position to be absolute. */
+        background-color: #f4f4f4;
+        /*set the background-color to be #f4f4f4. */
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        /*set abit of box shadow. */
+        z-index: 55;
+        /*set the z-index to be 55 so that it will be displayed first. */
+
+    }
+
+
+    /* below is to display the individual containers as a block if it hovers on them. */
+
+    ul li:hover #WorldNewsContainer {
+        display: block;
+    }
+
+    ul li:hover #BusinessNewsContainer {
+        display: block;
+    }
+
+
+
+    ul li:hover #TechnologyNewsContainer {
+        display: block;
+    }
+
+    ul li:hover #OtherNewsContainer {
+        display: block;
+    }
+
+
+
+
+
+}
+
+/* Media Screen FOR Other Screen Container so that it doesn't go out of the screen */
+@media screen and (min-width:1000px) and (max-width:1250px) {
+
+    #OtherNewsContainer {
+        right: 30px;
+        /* ensure that the othernewscontainer doesn't go out of the main page.*/
+    }
+
+    /* below is to display the individual containers as a block if it hovers on them. */
+
+    ul li:hover #WorldNewsContainer {
+        display: block;
+    }
+
+    ul li:hover #BusinessNewsContainer {
+        display: block;
+    }
+
+
+
+    ul li:hover #TechnologyNewsContainer {
+        display: block;
+    }
+
+    ul li:hover #OtherNewsContainer {
+        display: block;
+    }
+
+
+}
+
+
+
+/* set the nav li headers to underline when hovered and have a pointer to indicate that it can be pressed. */
+
+nav li h:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    /* set for all a element if a mouse hovers over then text-decoration is underlined and cursor is pointer to indicate links. */
+}
+
+
+
+/*Market Updates Row*/
+/*Media Screen for below 1000px For the Market Updates Animation*/
+@media screen and (min-width:0px) and (max-width:1000px) {
+    #MarketUpdates {
+        display: inline-flex;
+        /* set the display of the content of the marketupdates div to be inline-flex. */
+        width: 100%;
+        /*set the width to be 100% of the parent element.*/
+        height: 40px;
+        /*set the height to be 40px. */
+        padding-left: 10%;
+        /*set the padding-left and right to be 10% so that it doesn't go sticking next to the beginning or the end of the windows width. */
+        padding-right: 10%;
+        font-size: 0.8em;
+        /*set the font-size to 0.8em */
+
+
+
+    }
+
+    @keyframes scrolling {
+        0% {
+            transform: translateX(-200vw);
+        }
+
+        100% {
+            transform: translateX(100vw);
+        }
+
+        /*set the animation to go from -200vw to 100vw. */
+    }
+
+}
+
+/*Media Screen for above 1000 px For the Market Updates Animation */
+@media screen and (min-width:1000px) {
+    #MarketUpdates {
+        display: inline-flex;
+        /* set the display of the content of the marketupdates div to be inline-flex. */
+        width: 100%;
+        /*set the width to be 100% of the parent element.*/
+        height: 40px;
+        /*set the height to be 40px. */
+        padding-left: 10%;
+        /*set the padding-left and right to be 10% so that it doesn't go sticking next to the beginning or the end of the windows width. */
+        padding-right: 10%;
+        font-size: 0.8em;
+        /*set the font-size to 0.8em */
+
+    }
+
+
+    @keyframes scrolling {
+        0% {
+            transform: translateX(-100vw);
+        }
+
+        100% {
+            transform: translateX(100vw);
+        }
+
+        /*set the animation to go from -200vw to 100vw. */
+    }
+
+
+}
+
+#MarketPlaceHeader {
+    width: 20%;
+    display: inline;
+    /* set the width to be 20% and display to be inline for the text "market Updates"*/
+}
+
+#MarqueeBox {
+    display: inline-flex;
+    /*set the display to be inline-flex. */
+    width: 80%;
+    /*set the width to be 80%. */
+    overflow: hidden;
+    /*set the overflow to be hidden. */
+    height: 100%;
+    /*set the height to be 100%. */
+
+}
+
+.MarqueeBox-Content {
+    animation: scrolling 25s linear infinite;
+    display: flex;
+    list-style: none;
+}
+
+.MarqueeBox-Content:hover {
+
+    animation-play-state: paused
+}
+
+
+
+.MarqueeBox-Box {
+    display: inline-block;
+    /*set the Marqueebox-box to be inline-block. */
+    padding-left: 5%;
+    /*set the padding-left to be 5% so that it will have some space from the previous element. */
+    text-transform: uppercase;
+    /*set the text to be uppercase. */
+    white-space: nowrap;
+    /*set the whitespace to nowrap. so that it will remain in a line. */
+}
+
+
+.UL {
+    width: 100%;
+
+}
+
+/*set the width to be 100% for the market updates row. */
+
+
+.UL li {
+    display: inline-block;
+}
+
+/*set the display of the content to be inline-block. */
+
+/* End Of Market Updates Row*/
+
+
+
+/*===Index.html Main Page Code===*/
+/*=Latest News Row= */
+
+
+/*Spacing container to have some space from the left and right side of the window and have the colour of the theme. */
+#Spacing_Container {
+    display: block;
+    /* display content of the spacing container to be laid out in block */
+    width: 100%;
+    /* set the width to 100% of the window*/
+    height: 100%;
+    /* set the height to be 100% of the window. */
+    background-color: #f4f4f4;
+    /* set the color to #f4f4f4 */
+    padding-left: 3.33vw;
+    /* set the padding-left to be 3.33vw */
+    padding-right: 3.33vw;
+    /*set the padding-right to be 3.33vw */
+    padding-bottom: 2vh;
+    /*set the padding-bottom to be 2vh so that it can have some space from the element below.*/
+
+
+}
+
+/* Media Screen For Main Content for 1000px and above(WideScreen)*/
+@media screen and (min-width:1000px) {
+
+    .Grid_News {
+        display: grid;
+        /* display the content in grid form. */
+        grid-template-columns: 2fr 1fr;
+        /* let the columns be 2/3 and 1/3. so it will have two blocks, one bigger than the other. */
+        width: 100%;
+        /*set the width to be 100% of the parent element.*/
+        height: auto;
+        /*set the height to be auto. */
+        margin-left: auto;
+        /*set the margin-left to be auto. */
+        margin-right: auto;
+        /*set the margin-right to be auto. */
+        border-right-style: solid;
+        /* set the border-right to be solid. */
+        border-right-color: white;
+        /* set the border-right color to be white. */
+    }
+
+    #News1 {
+        width: 100%;
+        /* set the width to be 100% */
+        height: 100%;
+        /* set the height to be 100% */
+        border-right: 2px;
+        /* set the border-right to be 2px */
+        border-right-style: solid;
+        /* set the border-right style to be solid. */
+        border-right-color: white;
+        /* set the border-right color to be white. */
+        grid-row: span 2;
+        /*set the grid-row to span 2. to extend the news 1. */
+
+    }
+
+    #News2 {
+        padding-left: 5px;
+        /* set the padding-left to be 5px. */
+        width: 100%;
+        /* set the width of news2 to 100%*/
+        height: 50%;
+        /* set the height to be 50% */
+        border-bottom: 2px;
+        /* set the border-bottom to be 2px. */
+        border-bottom-style: solid;
+        /* set the border-bottom style to be solid */
+        border-bottom-color: white;
+        /* set the border-bottom-color to be white */
+        padding-bottom: 2px;
+        /*set the padding-bottom to be 2px. */
+
+    }
+
+}
+
+/* Media Screen For first section of the  Main Content for 0-1000px and above(Mobile/Tablet Screen)*/
+@media screen and (min-width:0px) and(max-width:1000px) {
+    .Grid_News {
+        display: flex;
+        /* set the grid news to be flex instead of grid to make them flow from top to bottom instead of displaying them from left to right. */
+        flex-direction: column;
+        /* flex-direction to be column.*/
+        width: 100%;
+        /* set the width to be 100% */
+        height: auto
+            /* set the height to be auto */
+
+    }
+
+    #News1 {
+        font-size: 1.2em;
+        width: 100%;
+        /*set the width to be 100%*/
+        height: 100%;
+        /* set the height to be 100% */
+        border-right: 2px;
+        /* set the border-right to be 2px. */
+
+    }
+
+    #News2 {
+        padding-left: 5px;
+        /* set the padding-left to be 5px. */
+        width: 100%;
+        /* set the width to be 100% */
+        height: 50%;
+        /* set the height to be 50% */
+        padding-bottom: 2px;
+        /* set the padding-bottom to be 2px . */
+    }
+
+
+}
+
+
+
+.Grid_News a:hover {
+    text-decoration: underline;
+    /* set the links to be underlined whenever the mouse hovers over them. */
+}
+
+a {
+    color: #404040;
+    text-decoration: none;
+}
+
+/* set the clickable links to be #404040 to indicate that it can be pressed. */
+
+#Figcaption1 {
+    text-align: center;
+    /*let the text-align to be centered for figcaption. */
+}
+
+
+#ParagraphBox1 {
+    padding-left: 3vw;
+    /* let the padding-left to be 3vw. */
+    padding-right: 3vw;
+    /* let the padding-right to be 3vw.*/
+}
+
+#Paragraph1 {
+    line-height: 2;
+    /* let the line-height to be 2. */
+    padding-right: 2px;
+    /* let the padding-right to be 2px.*/
+}
+
+.MobilePics {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    /* set the mobile pics to be 100% of the width. */
+    height: 100%;
+    /* set the height of the mobile pic to be 100% of the height. */
+}
+
+
+#SideNews {
+    display: block;
+    /* set the side news to be displayed in block. */
+    width: 100%;
+    /* set the width to be 100% */
+    height: 100%;
+    /*set the height to be 100% */
+}
+
+
+
+
+#TechnologyPic {
+    object-fit: cover;
+    width: 100%;
+    /* set the width to be 100% */
+    height: 100%;
+    /* set the height to be auto */
+}
+
+
+
+
+#News3 {
+    padding-left: 5px;
+    /* set the padding-left to be 5px.*/
+    width: 100%;
+    /*set the width to be 100%*/
+    height: 50%;
+    /* set the height to be 50% */
+}
+
+#GlobalPic {
+    object-fit: cover;
+    width: 100%;
+    /*set the width to be 100% */
+    Height: auto;
+    /*set the height to be auto. */
+}
+
+.NewsHeader {
+    font-size: 2.5em;
+    /* let the fontsize of the newsheader to be big. */
+}
+
+
+
+
+.Time {
+    text-align: left;
+    /* let the text be aligned to the left side of the container. */
+    font-size: 0.8em;
+    /* let the fontsize be 0.8 em */
+}
+
+.NewsTitle {
+    text-align: left;
+    /* let the text to be aligned to left. */
+    color: #404040;
+    /* let the titles to be #404040. */
+    font-size: 2em;
+    /* let the fontsize to be bigger. */
+}
+
+/*Breaking News Row*/
+
+#Spacing_Container2 {
+    padding-left: 3.33vw;
+    /* padding -left to be 3.33vw  for the second section of the main content */
+    padding-right: 3.33vw;
+    /* padding-right of the spacing container to be 3.33vw also but for the second section of the main content.*/
+    padding-bottom: 2vh
+        /* let the padding -bottom to be 2vh so that it will have some space before the next section. */
+}
+
+
+.HotNews {
+    background-color: white;
+    /* set the background-color to white */
+    width: 100%;
+    /*set the width to 100% */
+    height: 100%;
+    /*set the height to 100%*/
+
+}
+
+#Spacing_Container2 a:hover {
+    text-decoration: underline;
+    /*set the links in spacing container 2 to underline so that users can spot them.*/
+}
+
+#InflationPic {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    /*set the inflation pic to 90% of the width. */
+    height: 80%;
+    /*set the height to 80% of the height. */
+    max-height: 600px;
+    /*set the max height to be 600px. */
+}
+
+#HotNewsParagraph {
+    font-size: 1.2em;
+    /*set the paragraph's fontsize to be 1.2em */
+}
+
+/* Video News */
+/* for media that is screen width between 0 to 1000px. */
+@media screen and (min-width:0px) and (max-width:1000px) {
+    .VideoNews {
+        display: flex;
+        /*set the display of the elements in videonews to flex*/
+        flex-direction: column;
+        /*set the flex direction to be column.*/
+        padding-left: 5vw;
+        /*set the padding-left to be 5vw. */
+        background-color: black;
+        /*set the background-color to be black. */
+        color: white;
+        /*set the font-color to be white. */
+        width: 100%;
+        /*set the width to be 100%.*/
+        height: 100%;
+        /*set the height to be 100%. */
+    }
+
+    #VideoHighlightedNews {
+        display: block;
+        /*set the display of the content to be in block. */
+        width: 100%;
+        /*set the width to be 100% */
+        height: 100%;
+        /*set the height to be 100%.*/
+        font-size: 1.2em;
+        /*set the font-size to 1.2em. */
+
+
+    }
+
+    #VideoPlaylist {
+        display: block;
+        /*set the videoplaylist to be displayed in block. */
+        width: 100%;
+        /*set the width to be 100%. */
+        height: 100%;
+        /*set the height to be 100%. */
+    }
+
+    .playlist_ul {
+        display: block;
+        /*set the playlist_ul to be in block.*/
+        width: 100%;
+        /*set the width to be 100%. */
+        list-style-type: none;
+        /*set the list style to be none. */
+    }
+
+    .VideoButton {
+        display: flex;
+        /*set the display of the content of the items to be in flex. */
+        width: 100%;
+        /*set the width to be 100%. */
+        height: 100%;
+        /*set the height to be 100%. */
+        max-height: 200px;
+    }
+
+    #VideoPlayer {
+        display: block;
+        /*set the display to be in block. */
+        width: 100%;
+        /*set the width to be 100%.*/
+        ;
+        /*set the height to be 100%. */
+    }
+
+
+    #Caption1 {
+        display: block;
+        /*set the caption to be displyed in block.*/
+        width: 50%;
+        /*set the width to be 50% of the parent element. */
+        height: 100%;
+        /*set the height to be 100% of the parent element. */
+    }
+
+
+    #Pic0box {
+        display: block;
+        padding-top: 5%;
+        width: 48%;
+        padding-left: 2%;
+    }
+
+    #Pic1box {
+        display: block;
+        /*set the display of content in pic1box to be in block. */
+        padding-top: 5%;
+        /*set the padding-top to 5% to enable space. */
+        width: 48%;
+        /*set the width to 48%. */
+        padding-left: 2%;
+        /*set the padding-left to 2% to enable space. */
+
+
+    }
+
+    #Pic1 {
+        object-fit: cover;
+        width: 100%;
+        /*set the width to be 100% of the parent element. */
+        height: 100%;
+        /*set the height to be 100%  */
+    }
+
+    #Pic2 {
+        object-fit: cover;
+        width: 100%;
+        /*set the width to be 100% of the parent element.. */
+        height: 100%;
+        /*set the height to be 100%  */
+    }
+
+    #Pic3 {
+        object-fit: cover;
+        width: 100%;
+        /*set the width to be 100% of the parent element.. */
+        height: 100%;
+        /*set the height to be 100%  */
+    }
+
+    #Pic0 {
+        object-fit: cover;
+        display: none;
+        /*set the display to be none and only show when users click on others button. */
+        width: 100%;
+        /*set the width to be 100% of the parent element.. */
+        height: 100%;
+        /*set the height to be 100%  */
+    }
+
+    #OtherVideoParagraph2, #OtherVideoParagraph1, #OtherVideoParagraph3 {
+        display: none;
+        /*set the display to be none and only appear if users click on other buttons. */
+    }
+
+
+    .Breakend {
+        display: none;
+        /*set the display to be none. */
+    }
+
+}
+
+@media screen and (min-width:1000px) {
+    .VideoNews {
+        display: inline-flex;
+        /*set the display to be inline-flex so that it goes from left toright from the title to the picture.*/
+        padding-left: 5.44vw;
+        /*set the padding-left to 5.44vw to enable space.*/
+        padding-right: 5.44vw;
+        /*set the padding-right to 5.44vw to enable space.*/
+        padding-bottom: 2vh;
+        /*set the padding-bottom to be 2vh so that it enables space.*/
+        background-color: black;
+        /*set the background-color to black.*/
+        color: white;
+        /*set the font-color to white.*/
+        width: 100%;
+        /*set the width to be 100%.*/
+        height: 100%;
+        /*set the height to be 100%.*/
+    }
+
+    #VideoHighlightedNews {
+        display: block;
+        /*set the display of the content of the item to be in block.*/
+        width: 70%;
+        /*set the width to be 70%.*/
+        height: 100%;
+        /*set the height to be 100% of the parent element.*/
+        font-size: 1.2rem;
+        /*set the font-size to be 1.2rem.*/
+    }
+
+    #VideoPlaylist {
+        display: block;
+        /*set the display of the items in the div to be in block.*/
+        width: 30%;
+        /*set the width to be 30%.*/
+        height: 100%;
+        /*set the height to be 100%.*/
+    }
+
+    .playlist_ul {
+        display: block;
+        /*set the display to be in block.*/
+        width: 100%;
+        /*set the width to be 100%.*/
+        list-style-type: none;
+        /*set the list style to none to remove the dots for UL.*/
+    }
+
+    #SecondVideo {
+        width: 100%;
+        /*set the width to be 100%.*/
+    }
+
+    .VideoButton {
+        display: flex;
+        /*set the display to be in flex.*/
+        width: 100%;
+        /*set the width to be 100% of the parent element.*/
+        height: 100%;
+        /*set the height to be 100%.*/
+        padding-bottom: 5%;
+        /*set the padding-bottom to be 5%.*/
+        max-height: 200px;
+
+
+    }
+
+
+
+
+    #VideoPlayer {
+        display: block;
+        /*set the display of the content of video player to be in block.*/
+        width: 100%;
+        /*set the width to be 100%.*/
+    }
+
+
+    #Caption1 {
+        display: block;
+        /*set the display of the content of caption 1 to be in block.*/
+        width: 100%;
+        /*set the width to be 50% of the parent element.*/
+        height: 100%;
+        /*set the height of caption1 to be 100% of the parent element.*/
+        text-align: left;
+    }
+
+
+
+
+    #Pic1box {
+        display: block;
+        /*set the pic1box to be displayed in block.*/
+        padding-top: 5%;
+        /*set the padding-top to be 5% to enable space.*/
+        width: 100%;
+        /*set the width to be 48% of the parent element.*/
+        padding-left: 2%;
+        /*set the padding-left to be 2% to enable space.*/
+
+
+    }
+
+    #Pic1 {
+        object-fit: cover;
+        width: 100%;
+        /*set the #Pic1 width to 100% of the parent element.*/
+        height: 100%;
+        /*set the #Pic1 width to be 100% of the parent element*/
+
+
+    }
+
+    #Pic2 {
+        object-fit: cover;
+        width: 100%;
+        /*set the width to be 100% of the parent element.*/
+        height: 100%;
+        /*set the height to be 100% of the parent element.*/
+    }
+
+    #Pic3 {
+        object-fit: cover;
+        width: 100%;
+        /*set the width to be 100% of the parent element.*/
+        /*set the*/
+        height: 100%;
+        /*set the height to be 100% of the parent element.*/
+    }
+
+    #Pic0 {
+        display: none;
+        /*set the display to be none.*/
+        object-fit: cover;
+        width: 100%;
+        /*set the width to be 100% of the parent element.*/
+        height: 100%;
+        /*set the height to be 100% of the parent element.*/
+    }
+
+    #OtherVideoParagraph2, #OtherVideoParagraph1, #OtherVideoParagraph3 {
+        display: none;
+        /*set the display to be none unless it's been showed.*/
+    }
+
+}
+
+
+
+
+
+/*Footer */
+
+footer {
+    width: 100%;
+    /*set the width to be 100%.*/
+    height: 100%;
+    /*set the height to be 100%.*/
+    padding-bottom: 5vh;
+    /* set the padding-bottom to 5vh so that it has some space away from the end of the page. */
+}
+
+
+/*Footer Container Box styling */
+
+.Footer {
+    width: 100%;
+    /*set the width to be 100%.*/
+    height: 100%;
+    /*set the height to be 100%.*/
+    text-align: center;
+    /*set the text to center.*/
+    display: block;
+    /*set the display to be in block.*/
+}
+
+
+/* Logos About Us */
+/*set the logos of facebook,instagram and twitter pictures so that viewers can find us.*/
+.fa {
+    padding: 5px;
+    font-size: 15px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+}
+
+
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+@media screen and (min-width:1000px) {
+    #Footerend {
+        display: none;
+    }
+
+    /* hide the br sign. */
+}
+
+/* End Of Index.HTML Page*/
+
+
+
+/* The Header, Navigation Bar and Footer are all based on HTML's CSS code*/
+/* The articles all use the same CSS styles as each other */
+
+/* Business News 1 */
+
+
+.HandleBarMainNews {
+    display: block;
+    /* set the display to block */
+    width: 75%;
+    /* set the width to be 75% */
+    font-size: 1.2em;
+    /* set the fontsize to 1.2em*/
+    margin-left: auto;
+    /* set the margin-left to auto */
+    margin-right: auto;
+    /* set the margin-right to auto */
+}
+
+/* images for other news articles that users might want to click on */
+#Image {
+    width: 300px;
+    /* set the width of the image to 300px */
+    height: 200px;
+    /* set the height to be 200px */
+    border-radius: 15%;
+    /* set the border radius to 15%*/
+}
+
+
+/* the main news photo for that page */
+#NewsPhoto {
+    display: block;
+    /* set the display to be block */
+    width: 75%;
+    /* set the width of the id #newsphoto to be 75% */
+    height: 100%;
+    /* set the height of the newsphoto to be 100% */
+    margin-left: auto;
+    margin-right: auto;
+    /* center the photo */
+}
+
+
+/* */
+.ReadOtherNewsLinks {
+    display: flex;
+    /*set the boxes to be flex so that it goes from left to right. */
+    text-align: center;
+    /* let the text be aligned to center. */
+    max-width: 300px;
+    /* 300px max-width so that pictures do not look too big. */
+    max-height: 200px;
+    /* 200px so that it doesn't go too long as mobile users might not be able to see. */
+
+}
+
+
+
+.SideNewsHeader {
+    text-align: center;
+    /* align the text "Other Articles to Center."*/
+}
+
+.SideNewsLink {
+    position: absolute;
+    /* let the text in the picture be absolute. */
+    top: 65%;
+    /* let the text be 65% away from the top */
+    width: auto;
+    /* let the width be auto.*/
+    background-color: black;
+    /* let the background color to be black so that users can see the white text. */
+
+
+}
+
+.PicAndTextBox {
+    position: relative;
+    /* let this box's position be relative.*/
+    text-align: center;
+    /* let the text be aligned to center. */
+    color: white;
+    /*let the font-color be white. */
+}
+
+.flex {
+    width: 100%;
+    /* so that it takes up 100% of the parent element. */
+    display: flex;
+    /* let the display be flex. */
+    flex-wrap: wrap;
+    /* so that it fits in the parent element */
+    height: 100%;
+    /*let the height be 100% */
+
+}
+
+.flex>div {
+    margin: 10px;
+    /* let the div in flexbox have a margin of 10px. */
+}
+
+.ReadOtherNewsLinks:hover {
+    transform: scale(1.1)
+        /* if useres hover over it will indicate that it is clickable */
+}
+
+@media screen and (min-width:1600px) {
+    .flex>div {
+        margin: 40px;
+        /* let the margin be 40px. */
+    }
+}
+
+/* styles for the carousel in chipmakernews.html */
+/* Youtube.com. 2021. https://www.youtube.com/watch?v=9HcxHDS2w1s&t=10s. [online] Available at: <https://www.youtube.com/watch?v=9HcxHDS2w1s&t=10s> [Accessed 28 March 2022]. */
+
+.carousel {
+    width: 100%;
+    height: 500px;
+    position: relative;
+
+}
+
+.carousel>ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide {
+    position: absolute;
+    opacity: 0;
+}
+
+.slide[data-active] {
+    position: absolute;
+    opacity: 1;
+
+}
+
+.slide>img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.carousel_track_container {
+    height: 100%;
+    position: relative;
+}
+
+
+
+.carousel-button {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .8);
+    border-radius: .25rem;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, .2)
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+    color: white;
+    background-color: (0, 0, 0, .2);
+    outline: 1px solid black;
+}
+
+.carousel-button.prev {
+    left: 1rem;
+}
+
+.carousel-button.next {
+    right: 1rem;
+}
+
+
+.CarouselDescription {
+    position: absolute;
+    background-color: black;
+    bottom: 0%;
+    color: white;
+
+}
+
+.FigcaptionHome{
+    background-color: lavender;
+    text-align: center;
+    margin:none;
+    
+}
+
+
+
+.FigcaptionNotHome {
+    margin-left:12.5%;
+    margin-right:12.5%;
+    background-color: lavender;
+    text-align: center;
+}
+
+
+Figcaption{
+    background-color: lavender;
+    text-align: center;
+    
+}

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-------- Metadata and link references. -------->
+    <meta charset="UTF-8">
+     <!--- metadata about page information. --->
+    <meta name="description" content="This page is the Ukraine World News page for WinInt">
+    <!--- metadata about our page --->
+    <meta name="keywords"
+        content="Financials,Finance,Information,News,Articles,Singapore,Global,Asia,Europe,United States,Federal Reserve, Interest Rates,Newsletter, Russia,China,International,HomePage">
+    <!---- initialize the windows width and scale. ---->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---- The stylesheets' source is in the directory that we used for the website. ---->
+    <link rel="stylesheet" , href="StyleSheets/stylesheet.css">
+    <!---- The stylesheets that we used for the social media pictures. ---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!----- script source is the java.js in the website's directory. ----->
+    <script src="javascript/javascript.js"></script>
+    <!---- This is the script for Handlebars ----->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.js"
+        integrity="sha512-c7SfJeKRl8g7wgL+zMGX78faYVGp+NZVQ587mRLrqeLySX/qHCQOKw/iZ5Pp64DaPjvedixWC/Fe73upnhBaRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+</head>
+
+
+<body id="body">
+
+    <div id="HTMLTitle">
+        <h1 id="Title">WinFin Int</h1>
+    </div>
+
+
+
+    <!--- This is the Navigation Bar HTML codes--->
+
+    <!-- Navigation Bar Icon For The Toggle Menu Button For Mobile Page -->
+    <nav>
+        <!-- we call a unordered list to call the menu button.Bar 1 , Bar 2, Bar 3 represents the lines in the menu box as shown in the website. -->
+        <ul>
+            <div id="ToggleMenuButton" class="ToggleMenuButton" onclick="ToggleMenu()">
+                <div class="Bar1"></div>
+                <div class="Bar2"></div>
+                <div class="Bar3"></div>
+            </div>
+
+            <!-- Button Back to Top -->
+            <button onclick="topFunction()" id="BacktoTopBtn" title="Go To Top">
+                Top
+            </button>
+
+            <!-- Main Navigation Bar Links and Boxes -->
+            <!-- we use an li to indicate that it is an item in the list of unordered list, using divs to create space where the elements such as text and picture can reside in. -->
+            <div id="NavigationDiv" class="NavigationDiv">
+                <li class="NavigationHeadLine"><a href="index.html">Home</a></li>
+
+                <li class="NavigationHeadLine">
+                    <h onclick="ToggleWorld()">World↓</h>
+                    <div class="NavNewsContainer" id="WorldNewsContainer">
+                        <ul class="NavNewsUL">
+                            <div class="WorldNews ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='UkraineTensionNews.html'>Ukraine Tension With Russia</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic TabletNavPics" src="Image/ux-gun-5Mj4PO7KIFc-unsplash.jpg"
+                                        alt="A picture of fighter jet"></image>
+                                </div>
+
+                            </div>
+                            <div class="WorldNews ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='BearMarketNews.html'>Bear Market Inbound?</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic TabletNavPics"
+                                        src="Image/jamie-street-VP4WmibxvcY-unsplash.jpg" alt="FTSE -6.83%"></image>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+
+                <li class="NavigationHeadLine">
+                    <h onclick="ToggleBusiness()">Business↓</h>
+                    <div class="NavNewsContainerS" id="BusinessNewsContainer">
+                        <ul class="NavNewsUL">
+                            <div class="ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='InterestRateRiseNews.html'>Interest rates are to raise higher.</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic" src="Image/ibrahim-boran-_aUwE2DnIPg-unsplash.jpg"
+                                        alt="dollar bills"></image>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+
+                <li class="NavigationHeadLine">
+                    <h onclick="ToggleTechnology()">Technology↓</h>
+                    <div class="NavNewsContainerS" id="TechnologyNewsContainer">
+                        <ul class="NavNewsUL">
+                            <div class="ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='ChipMakerNews.html'>Chipmaker having a lack of resources</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic" src="Image/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg"
+                                        alt="computer chips"></image>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+
+
+                <li class="NavigationHeadLine">
+                    <h onclick="ToggleOther()">Others↓</h>
+                    <div class="NavNewsContainerS" id="OtherNewsContainer">
+                        <ul class="NavNewsUL">
+                            <div class="ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='HipHopNews.html'>HipHop Making Big Revenue</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic" src="Image/elza-kurbanova-f8MLY_HKwqQ-unsplash.jpg"
+                                        alt="HipHop Old Magazines"></image>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+            </div>
+
+
+
+        </ul>
+    </nav>
+
+
+    <!-- Market Updates showing stock information -->
+    <!-- each div named marquee shows the stock index stockcode, rising or decreasing and by how much percentage -->
+    <div id="MarketUpdates">
+        <ul class="UL">
+            <div id="MarketPlaceHeader">
+                <p2>Market Updates:</p2>
+            </div>
+
+            <div id="MarqueeBox">
+                <ul class="MarqueeBox-Content">
+                    <div class="MarqueeBox-Box" id="Marquee1">
+                        <li class="MarqueeOpen">↑</li>
+                        <li class="Marquee">Nasdaq</li>
+                        <li class="MarqueeEnd">+4.06%</li>
+                    </div>
+
+                    <div class="MarqueeBox-Box" id="Marquee2">
+                        <li class="MarqueeOpen">↑</li>
+                        <li class="Marquee">DJI</li>
+                        <li class="MarqueeEnd">+2.25%</li>
+                    </div>
+
+                    <div class="MarqueeBox-Box" id="Marquee3">
+                        <li class="MarqueeOpen">↑</li>
+                        <li class="Marquee">FTSE</li>
+                        <li class="MarqueeEnd">-5.21%</li>
+                    </div>
+
+                    <div class="MarqueeBox-Box" id="Marquee4">
+                        <li class="MarqueeOpen">↑</li>
+                        <li class="Marquee">N225</li>
+                        <li class="MarqueeEnd">+5.40%</li>
+                    </div>
+
+                    <div class="MarqueeBox-Box" id="Marquee5">
+                        <li class="MarqueeOpen">↑</li>
+                        <li class="Marquee"><a href="">STI</a></li>
+                        <li class="MarqueeEnd">+3.0%</li>
+                    </div>
+
+                    <div class="MarqueeBox-Box" id="Marquee6">
+                        <li class="MarqueeOpen">↑</li>
+                        <li class="Marquee">HSI</li>
+                        <li class="MarqueeEnd">+1.25%</li>
+                    </div>
+
+                    <div class="MarqueeBox-Box" id="Marquee7">
+                        <li class="MarqueeOpen">↑</li>
+                        <li class="Marquee">TRY</li>
+                        <li class="MarqueeEnd">+5.11%</li>
+                    </div>
+
+                    <div class="MarqueeBox-Box" id="Marquee8">
+                        <li class="MarqueeOpen">↑</li>
+                        <li class="Marquee">TRY</li>
+                        <li class="MarqueeEnd">+5.13%</li>
+                    </div>
+
+                    <div class="MarqueeBox-Box" id="Marquee9">
+                        <li class="MarqueeOpen">↑</li>
+                        <li class="Marquee">TRY</li>
+                        <li class="MarqueeEnd">+4.21%</li>
+                    </div>
+                </ul>
+            </div>
+        </ul>
+
+
+    </div>
+
+
+    <!--- The Main Content for Index.html showcasing our news.--->
+    <main>
+        <!--Section 1 -->
+        <div id="Spacing_Container">
+
+            <div class="Grid_News">
+
+                <div id="News1">
+                    <h1 class="NewsHeader">Latest News</h1>
+                    <figure id="Figcaption1">
+                        <h2 class="NewsTitle"><a href="BearMarketNews.html">Bear Market in sight, Futures, FTSE and
+                                NASDAQ down by 10%</a></h2>
+                        <p class="Time">5:49AM SGT </p>
+                        <img class="TabletPics MobilePics" src="Image/jamie-street-VP4WmibxvcY-unsplash.jpg"
+                            alt="FTSE -6.83%">
+                        <figcaption class="FigcaptionHome">
+                            The Plunge of FTSE 100 in yesterday's bear market
+                        </figcaption>
+                    </figure>
+                    <div id="ParagraphBox1">
+                        <p id="Paragraph1">The fear of wars, the ongoing pandemic, the rising of interest rates has led
+                            to the woes of investors. Will the stock market be seeing another financial crisis re-enact
+                            in 2022? Analyst from various companies such as bloomman sachs, goldberg, Bank of Aswandi
+                            has come together and gave their thoughts on the upcoming market trends and find out which
+                            sectors of the market are worth investing into right now. </p>
+                    </div>
+                    <hr width="80%">
+                </div>
+
+                <div id="SideNews">
+                    <div id="News2" class="OtherNews">
+                        <h1 class="NewsHeader">Technlogy</h1>
+                        <h2 class="NewsTitle"><a href="ChipMakerNews.html">Chipmakers facing shortage of resources</a>
+                        </h2>
+                        <p class="Time">5:49AM SGT </p>
+                        <figure>
+                            <image id="TechnologyPic" src="Image/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg"
+                                alt="A Picture Of A Computer Chip"></image>
+                            <figcaption class="FigcaptionHome">A Computer Chip</figcaption>
+                        </figure>
+                    </div>
+
+                    <div id="News3" class="OtherNews">
+                        <h1 class="NewsHeader">Global</h1>
+                        <h2 class="NewsTitle"><a href="UkraineTensionNews.html">Russia tension with Ukraine</a></h2>
+                        <p class="Time">6:54AM SGT</p>
+                        <figure>
+                            <image id="GlobalPic" src="Image/ux-gun-5Mj4PO7KIFc-unsplash.jpg"
+                                alt="A picture of fighter jet"></image>
+                            <figcaption class="FigcaptionHome">Fighter Jets</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--Section 2 -->
+        <!-- This section containing a header, a figure which contains the image and the caption and time and the description. -->
+        <div class="HotNews">
+            <div id="Spacing_Container2">
+                <div>
+                    <h1>Breaking News</h1>
+                    <figure>
+                        <h2 class="NewsTitle"><a href="BearMarketNews.html">The Interest Rate may have to rise sharply
+                                to fight against inflation</a></h2>
+                        <image id="InflationPic" src="Image/ibrahim-boran-_aUwE2DnIPg-unsplash.jpg"
+                            alt="A Picture Of Money"></image>
+                        <figcaption class="FigcaptionHome">A Picture of Money</figcaption>
+                        <p>2 Days Ago, 6PM SGT</p>
+                        <p id="HotNewsParagraph">Earlier today, The chairman of the Federal Reserve, Jerome Powell has
+                            hinted that the interest rates may be going higher due to the circumstances of rising
+                            interest rates. Several markets have plunged down. Dow Jones have decreased by 3%, followed
+                            by STI decreased with 1.25%, NASDAQ decreased by 8% and other global markets are all
+                            plunging due to the uncertainty of how high the interest rates are going to rise. Investors,
+                            Institutions weigh their concerns on the effectiveness of the fiscal policy and also crisis.
+                            Alexandra Yap, Goldman Sachs analyst has predicted that it is going to be a bear market due
+                            to the myriad of concerns revolving around coronavirus and also inflation. "The recovery of
+                            such crisis will take time" said Analyst Alexandra Yap. </p>
+                    </figure>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <!--Section 3 -->
+        <!-- This section containing a header, a video which contains the video source and the caption and date and time. Buttons work by using javascript to switch between them by using document.write() to replace content from one box to the boxes that are hidden. -->
+        <div id="Spacing_Container3">
+            <div class="VideoNews">
+                <div id="VideoHighlightedNews">
+                    <h2>Video News</h2>
+                    <h3 id="VideoNewsTitle">Hip Hop Investment</h3>
+                    <video id="VideoPlayer" src="Video/Dead%20Rose.mp4" width="960" height="540" controls>
+
+
+                    </video>
+                    <div id="Pic1box">
+                        <image id="Pic0" src="Image/stanley-shashi-Pm_926lM-xI-unsplash.jpg"></image>
+                    </div>
+                    <p id="ParagraphVideo">Music Industry's evolution bringing in new millionaires and billionaires.
+                        HipHop labels and Record Companies will skyrocket if they create the next big hit. Here are some
+                        companies that Wang's Time recommend that will exceed public expectations.
+                        <br>1.LEEHO HIPHOP<br>
+                        2.RimpHop<br>
+                        3.ChinaWine<br>
+                        4.MS Music<br>
+                        5.SKRRR<br>
+
+                        <button id="ReadMoreIndex" type="ButtonHipHop" onclick="HipHopNews()">Read More</button>
+                    </p>
+
+                </div>
+
+                <div id="VideoPlaylist">
+                    <div>
+                        <p>Relevant Video Articles</p>
+                        <ul class="playlist_ul">
+                            <li id="SecondVideo">
+                                <button id="VideoButton2" type="ButtonSecondVideo" onclick="changeVideo();">
+                                    <div class="VideoButton">
+                                        <div id="Caption1">
+                                            <h1 id="OtherVideoTitle1">China expresses support for Russia</h1>
+                                            <p id="OtherVideoParagraph1">China sends $1000000 in funding to russia to
+                                                combat ukraine.</p>
+                                        </div>
+                                        <div id="Pic1box">
+                                            <image id="Pic1" src="Image/kevin-schmid-DIq7Bs3ga2s-unsplash.jpg"
+                                                alt="Army Tank"></image>
+                                        </div>
+                                    </div>
+                                </button>
+
+                            </li>
+                            <br class="Breakend">
+
+                            <li id="ThirdVideo">
+                                <button id="VideoButton3" type="ButtonThirdVideo" onclick="changeVideo2();">
+                                    <div class="VideoButton">
+                                        <div id="Caption1">
+                                            <h1 id="OtherVideoTitle2">Crypto attracts investors amid fear</h1>
+                                            <p id="OtherVideoParagraph2">Binance Coins has increased over 1000% over the
+                                                last year, coins such as avalaunche and dm coin has increased by over
+                                                10000% over the recent few years. Is now a good time to buy
+                                                cryptocurrency? Hear from our analyst.</p>
+                                        </div>
+                                        <div id="Pic1box">
+                                            <image id="Pic2"
+                                                src="Image/andre-francois-mckenzie-iGYiBhdNTpE-unsplash.jpg"
+                                                alt="Bitcoin"></image>
+                                        </div>
+                                    </div>
+                                </button>
+                            </li>
+
+                            <br class="Breakend">
+                            <li id="FourthVideo">
+                                <button id="VideoButton4" type="ButtonFourthVideo" onclick="changeVideo3();">
+                                    <div class="VideoButton">
+                                        <div id="Caption1">
+                                            <h1 id="OtherVideoTitle3">Simpsons Predicts the Future again?</h1>
+                                            <p id="OtherVideoParagraph3"> From this episode of simpsons, it has
+                                                accurately predicted 60% of the recent events in 2021.</p>
+                                        </div>
+                                        <div id="Pic1box">
+                                            <image id="Pic3" src="Image/stijn-swinnen-qwe8TLRnG8k-unsplash.jpg"
+                                                alt="Simpsons"></image>
+                                        </div>
+                                    </div>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <!-- Footer element -->
+    <footer>
+        <div class="Footer">
+            <h3>About Us</h3>
+            <p3>Bringing The Most Accurate And Quickest Information</p3>
+            <br id="Footerend">
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        </div>
+    </footer>
+
+    <!-- calling the script so that buttons and navigation can transform once it hits that width of 1000px.-->
+    <script src="javascript/javascript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-------- Metadata and link references. -------->
+    <meta charset="UTF-8">
+     <!--- metadata about page information. --->
+    <meta name="description" content="This page is the Ukraine World News page for WinInt">
+    <!--- metadata about our page --->
+    <meta name="keywords"
+        content="Financials,Finance,Information,News,Articles,Singapore,Global,Asia,Europe,United States,Federal Reserve, Interest Rates,Newsletter, Russia,China,International,HomePage">
+    <!---- initialize the windows width and scale. ---->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---- The stylesheets' source is in the directory that we used for the website. ---->
+    <link rel="stylesheet" , href="StyleSheets/stylesheet.css">
+    <!---- The stylesheets that we used for the social media pictures. ---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!----- script source is the java.js in the website's directory. ----->
+    <script src="javascript/javascript.js"></script>
+    <!---- This is the script for Handlebars ----->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.js"
+        integrity="sha512-c7SfJeKRl8g7wgL+zMGX78faYVGp+NZVQ587mRLrqeLySX/qHCQOKw/iZ5Pp64DaPjvedixWC/Fe73upnhBaRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+
+</head>
+
+
+<body>
+    <div id="HTMLTitle">
+        <h1 id="Title">WinFin Int</h1>
+    </div>
+
+    <!--- This is the back to top button --->
+    <button onclick="topFunction()" id="BacktoTopBtn" title="Go To Top">
+        Top
+    </button>
+
+
+    <!--- This is the Navigation Bar HTML codes--->
+
+    <!-- Navigation Bar Icon For The Toggle Menu Button For Mobile Page -->
+    <nav>
+        <!-- we call a unordered list to call the menu button.Bar 1 , Bar 2, Bar 3 represents the lines in the menu box as shown in the website. -->
+        <ul>
+            <div id="ToggleMenuButton" class="ToggleMenuButton" onclick="ToggleMenu()">
+                <div class="Bar1"></div>
+                <div class="Bar2"></div>
+                <div class="Bar3"></div>
+            </div>
+
+            <!-- Main Navigation Bar Links and Boxes -->
+            <!-- we use an li to indicate that it is an item in the list of unordered list, using divs to create space where the elements such as text and picture can reside in. -->
+            <div id="NavigationDiv" class="NavigationDiv">
+                <li class="NavigationHeadLine"><a href="index.html">Home</a></li>
+
+                <li class="NavigationHeadLine">
+                    <h onclick="ToggleWorld()">World↓</h>
+                    <div class="NavNewsContainer" id="WorldNewsContainer">
+                        <ul class="NavNewsUL">
+                            <div class="WorldNews ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='UkraineTensionNews.html'>Ukraine Tension With Russia</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic TabletNavPics" src="Image/ux-gun-5Mj4PO7KIFc-unsplash.jpg"
+                                        alt="A picture of fighter jet"></image>
+                                </div>
+
+                            </div>
+                            <div class="WorldNews ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='BearMarketNews.html'>Bear Market Inbound?</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic TabletNavPics"
+                                        src="Image/jamie-street-VP4WmibxvcY-unsplash.jpg" alt="FTSE -6.83%"></image>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+
+                <li class="NavigationHeadLine">
+                    <h onclick="ToggleBusiness()">Business↓</h>
+                    <div class="NavNewsContainerS" id="BusinessNewsContainer">
+                        <ul class="NavNewsUL">
+                            <div class="ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='InterestRateRiseNews.html'>Interest rates are to raise higher.</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic" src="Image/ibrahim-boran-_aUwE2DnIPg-unsplash.jpg"
+                                        alt="dollar bills"></image>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+
+                <li class="NavigationHeadLine">
+                    <h onclick="ToggleTechnology()">Technology↓</h>
+                    <div class="NavNewsContainerS" id="TechnologyNewsContainer">
+                        <ul class="NavNewsUL">
+                            <div class="ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='ChipMakerNews.html'>Chipmaker having a lack of resources</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic" src="Image/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg"
+                                        alt="computer chips"></image>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+
+
+                <li class="NavigationHeadLine">
+                    <h onclick="ToggleOther()">Others↓</h>
+                    <div class="NavNewsContainerS" id="OtherNewsContainer">
+                        <ul class="NavNewsUL">
+                            <div class="ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='HipHopNews.html'>HipHop Making Big Revenue</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic" src="Image/elza-kurbanova-f8MLY_HKwqQ-unsplash.jpg"
+                                        alt="HipHop Old Magazines"></image>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+            </div>
+
+
+
+        </ul>
+    </nav>
+
+
+
+
+    <main>
+        <div id="Spacing_Container">
+            <div class="HandleBarMainNews">
+                <h1>Latest Technology News</h1>
+                <h2>The Supply Disaster Of The Chipmakers</h2>
+                <p class="Time">10:59PM SGT</p>
+
+
+
+                <div class="carousel" data-carousel>
+
+
+                    <ul data-slides>
+
+                        <li class="slide" data-active id="carouselpic1">
+
+
+                            <image class="carouselPhoto" src="Image/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg"
+                                alt="A Computer Chip"></image>
+                            <p class="CarouselDescription">A Computer Chip</p>
+
+                            <button class="carousel-button prev" data-carousel-button="prev"
+                                onclick="previousSlide()">&#8656;</button>
+                            <button class="carousel-button next" data-carousel-button="next"
+                                onclick="nextslide()">&#8658;</button>
+                        </li>
+
+                        <li class="slide" id="carouselpic2">
+                            <image id="carouselPhoto" src="Image/pexels-caio-64609.jpg" alt="Man Working In A Store">
+                            </image>
+                            <p class="CarouselDescription">Man working in a store</p>
+                            <button class="carousel-button prev" data-carousel-button="prev"
+                                onclick="previousSlide()">&#8656;</button>
+                            <button class="carousel-button next" onclick="nextslide()">&#8658;</button>
+                        </li>
+
+                        <li class="slide" id="carouselpic3">
+                            <image id="carouselPhoto" src="Image/slejven-djurakovic-0uXzoEzYZ4I-unsplash.jpg"
+                                alt="Intel's Computer Chip"></image>
+                            <p class="CarouselDescription">Intel's Computer Chip</p>
+                            <button class="carousel-button prev" data-carousel-button="prev"
+                                onclick="previousSlide()">&#8656;</button>
+                            <button class="carousel-button next" data-carousel-button="next"
+                                onclick="nextslide()">&#8658;</button>
+                        </li>
+                    </ul>
+
+                </div>
+                <p>Reports from CNBC have shown that there are millions of jobs but a shortage of workers due to people
+                    getting infected with covid and some people are fearful that covid may hit them while they're
+                    working.Therefore, due to these fears, the production of companies have began to slow down. This
+                    resulted in lesser resources being produced and lesser products being formed and finally a huge
+                    demand for supplies for the chips as people are buying up computers to work from home. However, the
+                    factory of chipmakers are unable to keep the amount of supply to match the amount of demand that
+                    they have and many other reasons such as the lack of resources like gold in the chips are being
+                    bought at a higher price as lesser workers are able to produce the gold. As a result, from the
+                    second hand market we can see that the price of a second hand chip has rose to as much as 150% to
+                    200% of the original price being sold at major stores.</p>
+
+                <p> Another reason for the lack fo supplies for chips are cryptocurrency miners buying up majority of
+                    the chips which resulted in the price increase of the second hand chips. The recent discovery of how
+                    cryptocurrency can give a huge return has a deep impact on the supplies of the chips that chipmakers
+                    are supplying. Could a price increase in Chips due to the several reasons be a solution to lack of
+                    supply for the chips or could the Chipmakers find a solution in time to tackle the supply problems.
+                </p>
+
+                <p>The lack of manpower was also significant in the chip makers firm as well. The reason for this is
+                    because of these firms have not enough qualified workers that are experienced in chipmaking and as a
+                    result, they are unable to produce the chips as quickly as before the pandemic. Would the chipmakers
+                    increase their cost of hiring to improve the situation or what other alternatives would they try to
+                    do to tackle the problem of qualified workers.</p>
+            </div>
+
+        </div>
+
+        <!-- Using the spacing container to generate space and generating the format by using handlebar. -->
+        <div id="Spacing_Container2">
+            <div class="HandleBarSideNews" id="HandleBarSideNews1"></div>
+        </div>
+
+
+
+
+
+
+        <!-- The HandleBarSide-Template -->
+
+        <script id="HandleBarSide-template" type="text/x-handlebars-template">
+                <h1 class="SideNewsHeader">{{SideNewsHeader}}</h1>
+               <hr>
+                <div class="flex">
+                    <div class="ReadOtherNewsLinks" onclick="BearMarketNews()">
+                        <div class="PicAndTextBox">
+                        <image id="Image" src={{{SideImageSource1}}} alt={{{SideImageAlt1}}}></image>
+                        <div class="SideNewsLink">
+                        <h>{{Business}}</h>
+                        </div>
+                        </div>
+                    </div>
+                   
+                
+                 
+                    <div class="ReadOtherNewsLinks">
+                        <div class="PicAndTextBox" onclick="UkraineTensionNews()">
+                        <image id="Image" src={{{SideImageSource5}}} alt={{{SideImageAlt5}}}></image>
+                        <div class="SideNewsLink">
+                        <h class="SideNewsLinkHeader">{{UkraineTension}}</h>
+                        </div>
+                        </div>
+                    </div>
+                     
+                    <div class="ReadOtherNewsLinks">
+                        <div class="PicAndTextBox" onclick="HipHopNews()">
+                        <image id="Image" src={{{SideImageSource3}}} alt={{{SideImageAlt3}}}></image>
+                        <div class="SideNewsLink">
+                        <h>{{HipHop}}</h>
+                         </div>
+                        </div>
+                    </div>
+                    
+               
+                    <div class="ReadOtherNewsLinks">
+                        <div class="PicAndTextBox" onclick="InterestRateNews()">
+                        <image id="Image" src={{{SideImageSource4}}} alt={{{SideImageAlt4}}}></image>
+                        <div class="SideNewsLink">
+                        <h>{{Business2}}</h>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </script>
+    </main>
+    <footer>
+        <div class="Footer">
+            <h3>About Us</h3>
+            <p3>Bringing The Most Accurate And Quickest Information</p3>
+            <br id="Footerend">
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        </div>
+    </footer>
+
+
+    <!-- calling the script so that buttons and navigation can transform once it hits that width of 1000px.-->
+    <script src="javascript/javascript.js"></script>
+</body>
+
+</html>

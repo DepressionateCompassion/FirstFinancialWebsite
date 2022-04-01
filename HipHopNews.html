@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-------- Metadata and link references. -------->
+    <meta charset="UTF-8">
+     <!--- metadata about page information. --->
+    <meta name="description" content="This page is the Ukraine World News page for WinInt">
+    <!--- metadata about our page --->
+    <meta name="keywords"
+        content="Financials,Finance,Information,News,Articles,Singapore,Global,Asia,Europe,United States,Federal Reserve, Interest Rates,Newsletter, Russia,China,International,HomePage">
+    <!---- initialize the windows width and scale. ---->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---- The stylesheets' source is in the directory that we used for the website. ---->
+    <link rel="stylesheet" , href="StyleSheets/stylesheet.css">
+    <!---- The stylesheets that we used for the social media pictures. ---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!----- script source is the java.js in the website's directory. ----->
+    <script src="javascript/javascript.js"></script>
+    <!---- This is the script for Handlebars ----->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.js"
+        integrity="sha512-c7SfJeKRl8g7wgL+zMGX78faYVGp+NZVQ587mRLrqeLySX/qHCQOKw/iZ5Pp64DaPjvedixWC/Fe73upnhBaRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+
+</head>
+
+
+<body>
+    <div id="HTMLTitle">
+        <h1 id="Title">WinFin Int</h1>
+    </div>
+
+    <!--- This is the back to top button --->
+    <button onclick="topFunction()" id="BacktoTopBtn" title="Go To Top">
+        Top
+    </button>
+
+
+    <!--- This is the Navigation Bar HTML codes--->
+
+    <!-- Navigation Bar Icon For The Toggle Menu Button For Mobile Page -->
+    <nav>
+        <!-- we call a unordered list to call the menu button.Bar 1 , Bar 2, Bar 3 represents the lines in the menu box as shown in the website. -->
+        <ul>
+            <div id="ToggleMenuButton" class="ToggleMenuButton" onclick="ToggleMenu()">
+                <div class="Bar1"></div>
+                <div class="Bar2"></div>
+                <div class="Bar3"></div>
+            </div>
+
+            <!-- Main Navigation Bar Links and Boxes -->
+            <!-- we use an li to indicate that it is an item in the list of unordered list, using divs to create space where the elements such as text and picture can reside in. -->
+            <div id="NavigationDiv" class="NavigationDiv">
+                <li class="NavigationHeadLine"><a href="index.html">Home</a></li>
+
+                <li class="NavigationHeadLine">
+                    <h onclick="ToggleWorld()">World↓</h>
+                    <div class="NavNewsContainer" id="WorldNewsContainer">
+                        <ul class="NavNewsUL">
+                            <div class="WorldNews ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='UkraineTensionNews.html'>Ukraine Tension With Russia</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic TabletNavPics" src="Image/ux-gun-5Mj4PO7KIFc-unsplash.jpg"
+                                        alt="A picture of fighter jet"></image>
+                                </div>
+
+                            </div>
+                            <div class="WorldNews ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='BearMarketNews.html'>Bear Market Inbound?</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic TabletNavPics"
+                                        src="Image/jamie-street-VP4WmibxvcY-unsplash.jpg" alt="FTSE -6.83%"></image>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+
+                <li class="NavigationHeadLine">
+                    <h onclick="ToggleBusiness()">Business↓</h>
+                    <div class="NavNewsContainerS" id="BusinessNewsContainer">
+                        <ul class="NavNewsUL">
+                            <div class="ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='InterestRateRiseNews.html'>Interest rates are to raise higher.</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic" src="Image/ibrahim-boran-_aUwE2DnIPg-unsplash.jpg"
+                                        alt="dollar bills"></image>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+
+                <li class="NavigationHeadLine">
+                    <h onclick="ToggleTechnology()">Technology↓</h>
+                    <div class="NavNewsContainerS" id="TechnologyNewsContainer">
+                        <ul class="NavNewsUL">
+                            <div class="ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='ChipMakerNews.html'>Chipmaker having a lack of resources</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic" src="Image/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg"
+                                        alt="computer chips"></image>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+
+
+                <li class="NavigationHeadLine">
+                    <h onclick="ToggleOther()">Others↓</h>
+                    <div class="NavNewsContainerS" id="OtherNewsContainer">
+                        <ul class="NavNewsUL">
+                            <div class="ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='HipHopNews.html'>HipHop Making Big Revenue</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic" src="Image/elza-kurbanova-f8MLY_HKwqQ-unsplash.jpg"
+                                        alt="HipHop Old Magazines"></image>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+            </div>
+
+
+
+        </ul>
+    </nav>
+
+
+    <main>
+        <div id="Spacing_Container">
+            <div class="HandleBarMainNews">
+                <div>
+                    <h1>Latest Other News</h1>
+                    <h2>Music</h2>
+                    <div id="HeaderContainer">
+                        <p1 class="Header NewsTitle">HipHop Making Big Bucks</p1>
+                        <br>
+                        <p2 class="Time">6.30AM SGT</p2>
+                    </div>
+
+                    <div id="HipHopNewsBox">
+                        <video width="100%" ,height="100%" controls>
+
+                            <source src="Video/Dead%20Rose.mp4" type="video/mp4">
+                            
+                        </video>
+                        <figcaption>A HipHop Sound Track</figcaption>
+                        
+                        <p>It is estimated that a music career in the HipHop Industry may be able to make you millions
+                            of dollars annually. Rappers like Kanye West has a net worth of $6.6 Billion, Travis Scott
+                            with a net worth of $60 Million. Lately, the Hip Hop Industry in China has also began to
+                            move with rappers like GAI, VaVa and PG One making insane revenues as reports stated that
+                            their pay for one show goes up to about $1 million in the Chinese Yuan as the show Rap Of
+                            China kicked off in China to display the hiphop culture in china and gather the views of the
+                            chinese people. </p>
+
+                        <p>As such, we believe that investing in the music production in China, USA, England and
+                            Philipines will greatly benefit the investors as the majority of the people in these
+                            countries have been influenced by the Hip Hop Culture or has listened to Hip Hop before.
+                            Therefore, It will be a great payout if you were to invest in these countries that we are
+                            about to mention. The first company would be Lee Ho Hip Hop. It began as a studio in 2013 in
+                            China and has a long history before it became listed in China. The producers of Lee Ho Hip
+                            Hop includes famous producers like Lee Ho and several of his disciples. They have produced
+                            many hit songs like snowball and many other popular hits. The Company could be found in
+                            China Shanghai A stocks.</p>
+
+                        <p>The Second Company would be Rimp Hop, where they have been producing english rap songs in
+                            2015 and grew to be a successful listed companies as they released a popular hit on Youtube
+                            that has gathered millions of views and gained hundreds of thousands of subscribers
+                            overnight with the song "raesah". We believe that Rimp Hop would continue to dominate
+                            majority of the views on youtube and bring in a significant ad revenue for the investors and
+                            also they have a huge growth potential if they were to produce more hits and collaborate
+                            with companies such as spotify to bring in even more revenue. The company could be found in
+                            the London Stock Exchange.</p>
+
+                        <p> The Third company that we would like to recommend is the China Wine Company which may be odd
+                            for its name as it is actually a music producing company and events which holds majority of
+                            the music festivals in South East Asia, China and other countries. They have pulled in a
+                            revenue of $5million per year and is expected to grow even more with their line of artists,
+                            producers and one of their songs "real" was on spotify #1 for a couple of weeks before it's
+                            overtaken by another song. These achievements have proved that it would be great to invest
+                            in the company. The company can be found in China Shanghai B stocks.</p>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- using spacing_container to generate space and the handlebar will generate the elements that will show the side news. -->
+        <div id="Spacing_Container2">
+            <div id="HandleBarSideNews1"></div>
+        </div>
+
+
+
+        <!-- The Script for handlebar-template to generate elements and containers.-->
+        <!-- Handlebarsjs.com. 2019. Introduction | Handlebars. [online] Available at: <https://handlebarsjs.com/guide/#partials> [Accessed 27 March 2022]. -->
+        <script id="HandleBarSide-template" type="text/x-handlebars-template">
+                <h1 class="SideNewsHeader">{{SideNewsHeader}}</h1>
+               <hr>
+                    <div class="flex">
+                    <div class="ReadOtherNewsLinks">
+                        <div class="PicAndTextBox" onclick="BearMarketNews()">
+                        <image id="Image" src={{{SideImageSource1}}} alt={{{SideImageAlt1}}}></image>
+                        <div class="SideNewsLink">
+                        <h>{{Business}}</h>
+                        </div>
+                        </div>
+                    </div>
+                   
+                
+                 
+                    <div class="ReadOtherNewsLinks">
+                        <div class="PicAndTextBox" onclick="TechnologyNews()">
+                        <image id="Image" src={{{SideImageSource2}}} alt={{{SideImageAlt2}}}></image>
+                        <div class="SideNewsLink">
+                        <h>{{Technology}}</h>
+                        </div>
+                        </div>
+                    </div>
+                     
+                    <div class="ReadOtherNewsLinks">
+                        <div class="PicAndTextBox" onclick="UkraineTensionNews()">
+                        <image id="Image" src={{{SideImageSource5}}} alt={{{SideImageAlt5}}}></image>
+                        <div class="SideNewsLink">
+                        <h>{{UkraineTension}}</h>
+                         </div>
+                        </div>
+                    </div>
+                    
+               
+                    <div class="ReadOtherNewsLinks">
+                        <div class="PicAndTextBox" onclick="InterestRateNews()">
+                        <image id="Image" src={{{SideImageSource4}}} alt={{{SideImageAlt4}}}></image>
+                        <div class="SideNewsLink">
+                        <h>{{Business2}}</h>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                    
+            
+            </script>
+
+
+    </main>
+
+    <footer>
+        <div class="Footer">
+            <h3>About Us</h3>
+            <p3>Bringing The Most Accurate And Quickest Information</p3>
+            <br id="Footerend">
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        </div>
+    </footer>
+
+
+    <!-- calling the script so that buttons and navigation can transform once it hits that width of 1000px.-->
+    <script src="javascript/javascript.js"></script>
+</body>
+
+</html>

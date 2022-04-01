@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-------- Metadata and link references. -------->
+    <meta charset="UTF-8">
+     <!--- metadata about page information. --->
+    <meta name="description" content="This page is the Ukraine World News page for WinInt">
+    <!--- metadata about our page --->
+    <meta name="keywords"
+        content="Financials,Finance,Information,News,Articles,Singapore,Global,Asia,Europe,United States,Federal Reserve, Interest Rates,Newsletter, Russia,China,International,HomePage">
+    <!---- initialize the windows width and scale. ---->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---- The stylesheets' source is in the directory that we used for the website. ---->
+    <link rel="stylesheet" , href="StyleSheets/stylesheet.css">
+    <!---- The stylesheets that we used for the social media pictures. ---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!----- script source is the java.js in the website's directory. ----->
+    <script src="javascript/javascript.js"></script>
+    <!---- This is the script for Handlebars ----->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.js"
+        integrity="sha512-c7SfJeKRl8g7wgL+zMGX78faYVGp+NZVQ587mRLrqeLySX/qHCQOKw/iZ5Pp64DaPjvedixWC/Fe73upnhBaRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+
+</head>
+
+
+<body>
+    <div id="HTMLTitle">
+        <h1 id="Title">WinFin Int</h1>
+    </div>
+
+
+
+
+    <!--- This is the back to top button --->
+    <button onclick="topFunction()" id="BacktoTopBtn" title="Go To Top">
+        Top
+    </button>
+
+
+
+
+
+
+
+
+    <!--- This is the Navigation Bar HTML codes--->
+
+    <!-- Navigation Bar Icon For The Toggle Menu Button For Mobile Page -->
+    <nav>
+        <!-- we call a unordered list to call the menu button.Bar 1 , Bar 2, Bar 3 represents the lines in the menu box as shown in the website. -->
+        <ul>
+            <div id="ToggleMenuButton" class="ToggleMenuButton" onclick="ToggleMenu()">
+                <div class="Bar1"></div>
+                <div class="Bar2"></div>
+                <div class="Bar3"></div>
+            </div>
+
+            <!-- Main Navigation Bar Links and Boxes -->
+            <!-- we use an li to indicate that it is an item in the list of unordered list, using divs to create space where the elements such as text and picture can reside in. -->
+            <div id="NavigationDiv" class="NavigationDiv">
+                <li class="NavigationHeadLine"><a href="index.html">Home</a></li>
+
+                <li class="NavigationHeadLine">
+                    <h onclick="ToggleWorld()">World↓</h>
+                    <div class="NavNewsContainer" id="WorldNewsContainer">
+                        <ul class="NavNewsUL">
+                            <div class="WorldNews ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='UkraineTensionNews.html'>Ukraine Tension With Russia</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic TabletNavPics" src="Image/ux-gun-5Mj4PO7KIFc-unsplash.jpg"
+                                        alt="A picture of fighter jet"></image>
+                                </div>
+
+                            </div>
+                            <div class="WorldNews ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='BearMarketNews.html'>Bear Market Inbound?</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic TabletNavPics"
+                                        src="Image/jamie-street-VP4WmibxvcY-unsplash.jpg" alt="FTSE -6.83%"></image>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+
+                <li class="NavigationHeadLine">
+                    <h onclick="ToggleBusiness()">Business↓</h>
+                    <div class="NavNewsContainerS" id="BusinessNewsContainer">
+                        <ul class="NavNewsUL">
+                            <div class="ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='InterestRateRiseNews.html'>Interest rates are to raise higher.</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic" src="Image/ibrahim-boran-_aUwE2DnIPg-unsplash.jpg"
+                                        alt="dollar bills"></image>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+
+                <li class="NavigationHeadLine">
+                    <h onclick="ToggleTechnology()">Technology↓</h>
+                    <div class="NavNewsContainerS" id="TechnologyNewsContainer">
+                        <ul class="NavNewsUL">
+                            <div class="ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='ChipMakerNews.html'>Chipmaker having a lack of resources</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic" src="Image/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg"
+                                        alt="computer chips"></image>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+
+
+                <li class="NavigationHeadLine">
+                    <h onclick="ToggleOther()">Others↓</h>
+                    <div class="NavNewsContainerS" id="OtherNewsContainer">
+                        <ul class="NavNewsUL">
+                            <div class="ULNewsContainer">
+                                <div class="licontainers">
+                                    <li><a href='HipHopNews.html'>HipHop Making Big Revenue</a></li>
+                                </div>
+
+                                <div class="picContainers">
+                                    <image class="NavPic" src="Image/elza-kurbanova-f8MLY_HKwqQ-unsplash.jpg"
+                                        alt="HipHop Old Magazines"></image>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+            </div>
+
+
+
+        </ul>
+    </nav>
+
+
+    <main>
+
+
+        <!-- Using the spacing container to generate space and generating the format by using handlebar. -->
+        <div id="Spacing_Container">
+            <div class="HandleBarMainNews" id=InterestRatesRiseNewsHandleBar></div>
+        </div>
+
+
+        <!-- Handlebarsjs.com. 2019. Introduction | Handlebars. [online] Available at: <https://handlebarsjs.com/guide/#partials> [Accessed 27 March 2022]. -->
+        <script id="IRHandleBar-template" type="text/x-handlebars-template">
+                <h1>{{NewsHeader}}</h1>
+                <h2>{{NewsTitle}}</h2>
+                    <p id="Time">{{Time}}</p>
+                <image id="NewsPhoto" src={{{ImageSource}}} alt={{{Imagealt}}}></image>
+                    <figcaption class="FigcaptionNotHome">{{ImageDescription}}</figcaption>
+                <br>
+                <br>
+                <p1>{{DescriptionParagraph}}</p1><br>
+                <br>
+                <p2>{{DescriptionParagraph2}}</p2>
+                <br> <br>
+                <p3>{{DescriptionParagraph3}}</p3>
+                
+            </script>
+
+
+        <script type="text/javascript">
+            var BMHandleBarinfo = document.getElementById("IRHandleBar-template").innerHTML;
+            var Template = Handlebars.compile(BMHandleBarinfo);
+            var data = Template({
+                NewsHeader: "Business News",
+                Time: "1:25am SGT",
+                NewsTitle: "Interest Rates to Rise, Panic amongst global equities",
+                ImageDescription:"A Picture of Euros And USD",
+                DescriptionParagraph: "The Federal Reserve has been saying since the end of 2021, that interest rates are going to rise to combat the growing inflation and the ongoing coronavirus pandemic. This piece of news have devastated major markets as majority of the companies will not borrow from banks because it is more expensive to do so, people will also tend to save when there's an increase in interest rate and therefore, it may cause major companies to stay stagnant and investors are unhappy to see their revenues falling.",
+                DescriptionParagraph2: "With the Coronavirus pandemic accompanied with the increase in interest rate, it was a shock to US's job market as companies are laying off people to save resources and also people falling sick from the Coronavirus and are unable to return to their job. From this, Analysts from WinFin Int has predicted that it is going to be a tough time and the global market will be falling into recession very quickly.",
+                DescriptionParagraph3: "Analysts have also urged people to withdraw from the stock market as it may be volatile for this period of the year. When the recession calms and the pandemic gets over, the market will be sure to recover and grow higher from the pre-pandemic state. ",
+                ImageSource: "Image/ibrahim-boran-_aUwE2DnIPg-unsplash.jpg",
+                Imagealt: "Dollar Bill"
+            })
+            document.getElementById("InterestRatesRiseNewsHandleBar").innerHTML += data;
+        </script>
+
+
+        <!-- Using the spacing container to generate space and generating the format by using handlebar. -->
+        <div id="Spacing_Container2">
+            <div id="HandleBarSideNews1"></div>
+        </div>
+
+        <!-- Handlebarsjs.com. 2019. Introduction | Handlebars. [online] Available at: <https://handlebarsjs.com/guide/#partials> [Accessed 27 March 2022]. -->
+        <!-- The HandleBarSide-Template -->
+        <script id="HandleBarSide-template" type="text/x-handlebars-template">
+                <h1 class="SideNewsHeader">{{SideNewsHeader}}</h1>
+               <hr>
+                    <div class="flex">
+                    <div class="ReadOtherNewsLinks" onclick="BearMarketNews()">
+                        <div class="PicAndTextBox">
+                        <image id="Image" src={{{SideImageSource1}}}></image>
+                        <div class="SideNewsLink">
+                        <h>{{Business}}</h>
+                        </div>
+                        </div>
+                    </div>
+                   
+                
+                 
+                    <div class="ReadOtherNewsLinks" onclick="TechnologyNews()">
+                        <div class="PicAndTextBox">
+                        <image id="Image" src={{{SideImageSource2}}}></image>
+                        <div class="SideNewsLink">
+                        <h>{{Technology}}</h>
+                        </div>
+                        </div>
+                    </div>
+                     
+                    <div class="ReadOtherNewsLinks" onclick="HipHopNews()">
+                        <div class="PicAndTextBox">
+                        <image id="Image" src={{{SideImageSource3}}}></image>
+                        <div class="SideNewsLink">
+                        <h>{{HipHop}}</h>
+                         </div>
+                        </div>
+                    </div>
+                    
+               
+                    <div class="ReadOtherNewsLinks" onclick="UkraineTensionNews()">
+                        <div class="PicAndTextBox">
+                        <image id="Image" src={{{SideImageSource5}}}></image>
+                        <div class="SideNewsLink">
+                        <h>{{UkraineTension}}</h>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                    
+            
+            </script>
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="Footer">
+            <h3>About Us</h3>
+            <p3>Bringing The Most Accurate And Quickest Information</p3>
+            <br id="Footerend">
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        </div>
+    </footer>
+
+    <!-- calling the script so that buttons and navigation can transform once it hits that width of 1000px.-->
+    <script src="javascript/javascript.js"></script>
+</body>
+
+</html>
